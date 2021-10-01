@@ -1,0 +1,132 @@
+* { 
+  margin: 0; 
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.App { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-width: 100vh;
+  min-height: 100vh ;
+
+  background-image: url('assets/background.png');
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-attachment: fixed;
+  background-position: top;
+  background-color: #E3E4F1;
+}
+
+h2 { 
+  font-family: Josefin Sans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 15px;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+button { 
+  all: unset; 
+}
+
+input { 
+  all: unset;
+
+  width: 540px;
+  padding: 20px;
+  margin-bottom: 24px;
+ 
+  border-radius: 5px;
+  box-shadow: 0px 35px 50px -15px #C2C3D680;
+
+  background-color: white;
+
+}
+
+input::placeholder { 
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+}
+
+.list-item { 
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 580px;
+  padding: 20px 24px;
+
+  font-family: Josefin Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+
+  color: #494C6B;
+  border-bottom: #E3E4F1 1px solid;
+}
+
+.hidden { 
+  display: none;
+}
+
+.list { 
+  border-radius: 5px;
+  background-color: white;
+}
+
+.list-footer { 
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 580px;
+  padding: 20px 24px;
+
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+
+  color: #494C6B;
+}
+
+.list-options { 
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+  width: 191px;
+  font-family: Josefin Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: -0.19px;
+}
+
+.limpar-lista { 
+  cursor: pointer;
+}
+
+.selected { 
+  color: #3A7CFD;
+}

@@ -1,0 +1,103 @@
+* { 
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App { 
+  background-image: linear-gradient(90deg, #030216 0%, #30304f 80%, #707277 100%);
+  min-width: 100vh;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  
+  color:rgb(226, 226, 226);
+}
+
+.card { 
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  
+  border: 1px solid rgb(187, 187, 187);
+  border-radius: 5px;
+  
+  min-width: 300px;
+  padding: 5px;
+}
+
+.card__info { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.card a { 
+  text-decoration: none;
+}
+
+.card__img { 
+  width: 50px;
+}
+
+.cards { 
+  display: flex;
+  flex-direction: column;
+  gap:5px
+}
+
+.spotify-logo { 
+  width: 300px;
+}
+
+.search-button { 
+  all: unset; 
+
+  border: 1px solid rgba(255, 255, 255, 0.405);
+  border-radius: 5px;
+
+  padding: 4px;
+  cursor: pointer;
+}
+
+.search-input { 
+  all: unset; 
+  border-radius: 4px;
+  display: block;
+  box-shadow: rgba(255, 255, 255, 0.38) 2px 2px 5px 2px;
+}
+
+.search-input:focus { 
+  box-shadow: rgba(255, 255, 255, 0.58) 2px 2px 5px 2px;
+}
+
+.search__form { 
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.alert { 
+  position: absolute;
+  top: 50%;
+  left: 60%;
+
+  bottom: 50%;
+
+  padding: 20px 50px;
+
+
+  background-color: rgba(0, 0, 0, 0.563);
+  border-radius: 5px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
