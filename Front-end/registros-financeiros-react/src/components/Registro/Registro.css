@@ -1,0 +1,78 @@
+.registro__data { 
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+.out { 
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  color: #FA8C10;
+}
+
+.in { 
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  color: #645FFB;
+}
+
+.options { 
+  position: relative;
+}
+
+.options img { 
+  cursor: pointer;
+}
+
+.container-confirm-delete { 
+  position: absolute;
+  left: 31px;
+  z-index: 3;
+
+  text-align: center;
+  padding: 7px 15px;
+  height: 46px;
+  width: 111px;
+  border-radius: 4px;
+
+  background: #E4F2FD;
+  font-family: Rubik;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 12px;
+  cursor: pointer;
+}
+
+.btn-actions-confirm-delete { 
+  all: unset;
+  
+  height: 15px;
+  width: 37px;
+  border-radius: 4px;
+
+  font-family: Rubik;
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 11px;
+  margin-top: 4px;
+
+  color: white;
+  cursor: pointer;
+}
+  
+.red-button { 
+  background-color:#FF576B;
+}
+
+.blue-button { 
+  background-color:#3A9FF1;
+}
+
+td { 
+  padding: 26px 0px;
+}

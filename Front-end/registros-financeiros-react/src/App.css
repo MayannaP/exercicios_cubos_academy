@@ -1,0 +1,155 @@
+body {
+  background: linear-gradient(90.23deg, #05EDE3 0.02%, #645FFB 99.63%);
+}
+
+.container-header { 
+  align-items: center;
+  gap: 8px;
+  height: 15vh;
+  padding-left: 100px; 
+}
+
+.header__title { 
+  font-family: Rubik;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 43px;
+
+  color: white;
+}
+
+
+.container { 
+  min-height: 85vh ;
+  width: 100%;
+
+  background: #FFFFFF;
+  border-radius: 60px 60px 0px 0px;
+  padding: 4% 7%;
+}
+
+.table { 
+  width: 966px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table-line { 
+  border-bottom: 1px solid #E0E0E0;
+  width: 100%;
+
+  font-family: Lato;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+}
+
+.open-filters-button { 
+  all: unset;
+  
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 3.5%;
+  
+  height: 30px;
+  width: 80px;
+  border-radius: 10px;
+  
+  background-color: #FAFAFA;
+  box-shadow: 0px 2px 11px 0px #0000001A;
+  
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  cursor: pointer;
+}
+
+.container-resume { 
+  margin-top: 50px;
+  margin-left: 40px;
+  height: 196px;
+  width: 236px;
+  border-radius: 10px;
+  padding: 26px 33px;
+
+  box-shadow: 0px 2px 11px 0px #0000001A;
+  background-color:#FAFAFA;
+}
+
+.btn-add { 
+  all: unset; 
+
+  margin-left: 40px;
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+  text-align: center;
+
+  height: 42px;
+  width: 236px;
+  border-radius: 5px;
+  margin-top: 16px;
+
+  color: white;
+  background: linear-gradient(91.26deg, #FA8C10 0%, #FF57D3 97.77%);
+}
+
+.resumo__spans { 
+  font-family: Rubik;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.resumo__title { 
+  font-family: Rubik;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  margin-bottom: 23px;
+}
+
+.balance { 
+  font-family: Rubik;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+
+  margin-top: 16px;
+  padding-top: 16px;
+
+  border-top: 1px solid #EAEAEA;
+}
+.balance-text{
+  color: #3A9FF1;
+}
+
+.table-head {
+  height: 58px;
+  max-width: 100%;
+  border-radius: 10px;
+
+  background: #FAFAFA;
+  box-shadow: 0px 2px 11px 0px #0000001A;
+
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17px;
+}
+
+th { 
+  padding: 24px 0 16px 0;
+}
+
+.arrow-up { 
+  transform: rotate(180deg);
+}
+
+.column-title-text { 
+  margin-right: 5px;
+}
