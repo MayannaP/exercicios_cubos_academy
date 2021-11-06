@@ -27,7 +27,9 @@
     "nodemon": "^2.0.13",
     "pg": "^8.7.1",
     "postgres": "^1.0.2",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "yup": "^0.32.11",
+    "yup-locales": "^1.2.0"
   },
   "devDependencies": {
     "eslint": "^8.0.0",

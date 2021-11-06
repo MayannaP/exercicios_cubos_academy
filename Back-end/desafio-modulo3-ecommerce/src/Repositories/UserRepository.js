@@ -16,7 +16,7 @@ async function getUser(filtros) {
   return (await query(selectQuery, params)).rows[0];
 }
 
-async function insertUser({ nome, email, senhaCriptografada, nome_loja }) {
+async function createUser({ nome, email, senhaCriptografada, nome_loja }) {
   return (
     await query(
       "INSERT INTO usuarios (nome, email, senha, nome_loja) VALUES ($1, $2, $3, $4)",
@@ -34,4 +34,4 @@ async function updateUser({ id, nome, email, senhaCriptografada, nome_loja }) {
   ).rowCount;
 }
 
-module.exports = { getUser, insertUser, updateUser };
+module.exports = { getUser, createUser, updateUser };

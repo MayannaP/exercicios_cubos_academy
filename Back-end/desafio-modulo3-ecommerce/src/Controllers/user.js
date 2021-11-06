@@ -1,30 +1,25 @@
 const bcrypt = require("bcrypt");
 const {
-  InvalidArgument,
   Unauthorized,
-  Conflict,
+  Conflict
 } = require("../Middlewares/errorClasses.js");
 const query = require("../Repositories/UserRepository.js");
-
-//id não deve permitir edição
+const { createUserSchema, updateUserSchema } = require('../schemas/user');
 
 async function create(req, res, next) {
   try {
+    await createUserSchema.validate(req.body)
+    
     const { nome, email, senha, nome_loja } = req.body;
-
-    if (!nome || !email || !senha || !nome_loja) {
-      throw new InvalidArgument("Todos campos são obrigatórios");
-    }
-
+    
     const user = await query.getUser({ email });
-
     if (user) {
       throw new Conflict("Já existe usuário cadastrado com o e-mail informado");
     }
 
     const senhaCriptografada = await bcrypt.hash(senha, 10);
 
-    const newUser = await query.insertUser({
+    const newUser = await query.createUser({
       nome,
       email,
       senhaCriptografada,
@@ -32,7 +27,6 @@ async function create(req, res, next) {
     });
 
     if (!newUser) {
-      //Essa validação faz sentido?
       return res.status(400).json("Não foi possivel cadastrar o usuário");
     }
 
@@ -60,7 +54,7 @@ async function get(req, res, next) {
 
 async function update(req, res, next) {
   try {
-    const { id } = req.user;
+    const { id, senha, nome, email, nome_loja } = req.user;
     const {
       senha: newSenha,
       nome: newNome,
@@ -68,23 +62,22 @@ async function update(req, res, next) {
       nome_loja: newNome_loja,
     } = req.body;
 
-    if (!newNome || !newEmail || !newSenha || !newNome_loja) {
-      throw new InvalidArgument("Todos campos são obrigatórios");
-    }
-
-    const user = await query.getUser({ email: newEmail });
-    if (user && user.id !== id) {
-      throw new Conflict("Já existe usuário cadastrado com o e-mail informado");
+    await updateUserSchema.validate(req.body);
+    if (newEmail) { 
+      const user = await query.getUser({ email: newEmail });
+      if (user && user.id !== id) {
+        throw new Conflict("Já existe usuário cadastrado com o e-mail informado");
+      }
     }
 
     const senhaCriptografada = await bcrypt.hash(newSenha, 10);
 
     await query.updateUser({
       id,
-      nome: newNome,
-      email: newEmail,
-      senhaCriptografada,
-      nome_loja: newNome_loja,
+      nome: newNome?? nome,
+      email: newEmail?? email,
+      senhaCriptografada: senhaCriptografada ?? senha,
+      nome_loja: newNome_loja ?? nome_loja,
     });
 
     return res.status(200).json();
